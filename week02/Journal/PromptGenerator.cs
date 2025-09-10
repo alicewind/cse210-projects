@@ -1,10 +1,11 @@
+using System;
 using System.Collections.Generic;
 
 public class PromptGenerator
 {
     public List<string> _prompts = new List<string>();
 
-    public string GetRandomPrompt()
+    public void PopulateList()
     {
         _prompts.Add("What am I grateful for today?");
         _prompts.Add("What is the most interesting conversation I had today?");
@@ -18,12 +19,11 @@ public class PromptGenerator
         _prompts.Add("How did I see the hand of the Lord in my life today?");
         _prompts.Add("What was the strongest emotion I felt today?");
         _prompts.Add("If I had one thing I could do over today, what would it be?");
-
-        foreach (string prompt in _prompts)
-        {
-            Console.WriteLine(prompt);
-        }
-
-        return "";
+    }
+    public string GetRandomPrompt()
+    {
+        Random rand = new Random();
+        int r = rand.Next(_prompts.Count);
+        return _prompts[r];
     }
 }
