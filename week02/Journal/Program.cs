@@ -5,6 +5,7 @@ class Program
 {
     static void Main(string[] args)
     {
+
         string choice = "";
 
         Console.WriteLine("Welcome to the journal program!");
@@ -19,10 +20,14 @@ class Program
             if (choice == "1")
             {
                 PromptGenerator prompt = new PromptGenerator();
-
-                Console.WriteLine($"{prompt}");
+                string _promptText = prompt.GetRandomPrompt();
+                Console.WriteLine($"{_promptText}");
                 Console.Write("> ");
-                string response = Console.ReadLine();
+                string newEntry = Console.ReadLine();
+            }
+            else if (choice == "2")
+            {
+
             }
         }
     }
