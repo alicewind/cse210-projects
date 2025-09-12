@@ -3,9 +3,10 @@ using System.Collections.Generic;
 
 public class PromptGenerator
 {
+
     public List<string> _prompts = new List<string>();
 
-    public void PopulateList()
+    public PromptGenerator()
     {
         _prompts.Add("What am I grateful for today?");
         _prompts.Add("What is the most interesting conversation I had today?");
@@ -20,6 +21,7 @@ public class PromptGenerator
         _prompts.Add("What was the strongest emotion I felt today?");
         _prompts.Add("If I had one thing I could do over today, what would it be?");
     }
+
     public string GetRandomPrompt()
     {
         Random rand = new Random();
