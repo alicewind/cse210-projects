@@ -8,6 +8,8 @@ class Program
 
         string choice = "";
 
+        Journal journal = new Journal();
+
         Console.WriteLine("Welcome to the journal program!");
 
         while (choice != "5")
@@ -19,15 +21,26 @@ class Program
 
             if (choice == "1")
             {
+                Entry entry = new Entry();
                 PromptGenerator prompt = new PromptGenerator();
                 string _promptText = prompt.GetRandomPrompt();
+
                 Console.WriteLine($"{_promptText}");
                 Console.Write("> ");
-                string newEntry = Console.ReadLine();
+                string userEntry = Console.ReadLine();
+
+                entry._entryText = userEntry;
+                entry._promptText = _promptText;
+                DateTime now = DateTime.Now;
+                entry._date = now.ToString("d");
+
+                journal.AddEntry(entry);
+                //Console.WriteLine(now);
+
             }
             else if (choice == "2")
             {
-
+                journal.DisplayAll();
             }
         }
     }
