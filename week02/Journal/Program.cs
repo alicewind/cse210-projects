@@ -1,4 +1,5 @@
 using System;
+
 using System.Net;
 
 class Program
@@ -32,7 +33,7 @@ class Program
                 entry._entryText = userEntry;
                 entry._promptText = _promptText;
                 DateTime now = DateTime.Now;
-                entry._date = now.ToString("d");
+                entry._date = now.ToShortDateString();
 
                 journal.AddEntry(entry);
                 //Console.WriteLine(now);
@@ -41,6 +42,18 @@ class Program
             else if (choice == "2")
             {
                 journal.DisplayAll();
+            }
+            else if (choice == "3")
+            {
+                Console.WriteLine("What is the filename?");
+                journal._filename = Console.ReadLine();
+                journal.LoadFromFile();
+            }
+            else if (choice == "4")
+            {
+                Console.WriteLine("What is the filename?");
+                journal._filename = Console.ReadLine();
+                journal.SaveToFile();
             }
         }
     }
