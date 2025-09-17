@@ -4,6 +4,16 @@ class Program
 {
     static void Main(string[] args)
     {
-        Console.WriteLine("Hello World! This is the ScriptureMemorizer Project.");
+        string entry = "";
+
+        while (entry != "quit") ;
+        {
+            Console.WriteLine();
+
+
+            entry = Console.ReadLine();
+
+        }
+
     }
 }
