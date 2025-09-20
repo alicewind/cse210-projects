@@ -34,6 +34,5 @@ public class Word //Keeps track of a single word and whether it is shown or hidd
         {
             return _text;
         }
-        return _text;
     }
 }
