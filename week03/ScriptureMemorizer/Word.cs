@@ -22,7 +22,7 @@ public class Word //Keeps track of a single word and whether it is shown or hidd
     }
     public bool IsHidden()
     {
-        return _isHidden; //details need to be added
+        return _isHidden;
     }
     public string GetDisplayText()
     {
