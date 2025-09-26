@@ -20,6 +20,6 @@ public class Product
     }
     public void Display()
     {
-        Console.WriteLine($"Product ID: {_productID} Item: {_productName} Price: ${_price} Quantity: {_quantity} ");
+        Console.WriteLine($"Product ID: {_productID} Item: {_productName} ");
     }
 }
