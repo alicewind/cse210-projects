@@ -4,6 +4,23 @@ class Program
 {
     static void Main(string[] args)
     {
-        Console.WriteLine("Hello World! This is the Mindfulness Project.");
+        int menuNumber = 0;
+
+        while (menuNumber != 4)
+        {
+            Console.Clear();
+            Console.WriteLine("Menu Options:");
+            Console.WriteLine("    1. Start breathing activity \n    2. Start reflecting activity \n    3. Start listing activity \n    4. Quit ");
+            Console.Write("Select a choice from the menu: ");
+            string menuChoice = Console.ReadLine();
+            menuNumber = int.Parse(menuChoice);
+
+
+            if (menuNumber == 1)
+            {
+                BreathingActivity activity1 = new BreathingActivity("Breathing", "This activity will help you relax by walking your through breathing in and out slowly. Clear your mind and focus on your breathing.");
+                activity1.Run();
+            }
+        }
     }
 }
