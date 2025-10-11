@@ -4,26 +4,34 @@ public class SimpleGoal : Goal
 
     public SimpleGoal(string name, string description, string points) : base(name, description, points)
     {
-
+        _isComplete = false;
     }
 
-    public override void RecordEvent()
+    public override int RecordEvent()
+    //Marking goal complete. Return the point value associated with recording the event.
     {
-        throw new NotImplementedException();//nope
+        _isComplete = true;
+        return _points;
     }
 
     public override bool IsComplete()
+    //return true if the goal is completed. 
     {
-        throw new NotImplementedException();//nope
+        if (_isComplete == true)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
     }
 
     public override string GetStringRepresentation()
+    //Provide all of the details of a goal in a way that is easy to save to a file, and then load later.
     {
-        throw new NotImplementedException();//nope
+        return $"Simple Goal: {_shortName}, {_description}, {_points}, {IsComplete}";
     }
 
-    public override string GetDetailsString()//program is requiring this, not sure why
-    {
-        throw new NotImplementedException();
-    }
+
 }

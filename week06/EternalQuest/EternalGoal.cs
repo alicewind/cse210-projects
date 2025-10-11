@@ -5,23 +5,23 @@ public class EternalGoal : Goal
 
     }
 
-    public override void RecordEvent()
+    public override int RecordEvent()
+    //Return the point value associated with recording the event.
     {
-        throw new NotImplementedException();//nope
+        return _points;
     }
 
     public override bool IsComplete()
+    //return true if the goal is completed. 
     {
-        throw new NotImplementedException();//nope
+        return false;
     }
 
     public override string GetStringRepresentation()
+    //Provide all of the details of a goal in a way that is easy to save to a file, and then load later.
     {
-        throw new NotImplementedException();//nope
+        return $"Eternal Goal: {_shortName}, {_description}, {_points}";
     }
 
-    public override string GetDetailsString()//program is requiring this, not sure why
-    {
-        throw new NotImplementedException();
-    }
+
 }
