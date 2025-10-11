@@ -30,8 +30,7 @@ public class SimpleGoal : Goal
     public override string GetStringRepresentation()
     //Provide all of the details of a goal in a way that is easy to save to a file, and then load later.
     {
-        return $"Simple Goal: {_shortName}, {_description}, {_points}, {IsComplete}";
+        return $"Simple Goal, {_shortName}, {_description}, {_points}, {_isComplete}";
     }
-
 
 }

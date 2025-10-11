@@ -14,12 +14,14 @@ public class ChecklistGoal : Goal
     //Adding to the number of times a checklist goal has been completed. Return the point value associated with recording the event (it may contain a bonus in some cases if a checklist goal was just finished).
     {
         _amountCompleted++;
+
         if (!IsComplete())
         {
             return _points;
         }
         else
         {
+            Console.WriteLine($"Congratulations! You just earned {_bonus} points!");
             return _points + _bonus;
         }
     }
@@ -40,7 +42,7 @@ public class ChecklistGoal : Goal
     public override string GetStringRepresentation()
     //Provide all of the details of a goal in a way that is easy to save to a file, and then load later.
     {
-        return $"Checklist Goal: {_shortName}, {_description}, {_points}, {_bonus}, {_target}, {_amountCompleted}";
+        return $"Checklist Goal, {_shortName}, {_description}, {_points}, {_bonus}, {_target}, {_amountCompleted}";
     }
 
     public override string GetDetailsString()
@@ -48,7 +50,7 @@ public class ChecklistGoal : Goal
     {
         if (!IsComplete())
         {
-            return $"[ ] {_shortName} ({_description} -- Currently Completed {_amountCompleted}/{_target})";
+            return $"[ ] {_shortName} ({_description}) -- Currently Completed {_amountCompleted}/{_target}";
         }
         else
         {

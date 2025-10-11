@@ -27,6 +27,10 @@ public abstract class Goal
             return $"[X] {_shortName} ({_description})";
         }
     }
+    public string GetName()
+    {
+        return $"{_shortName}";
+    }
 
     public abstract string GetStringRepresentation();
 

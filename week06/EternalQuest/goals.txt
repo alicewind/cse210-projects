@@ -1,0 +1,4 @@
+210
+Simple Goal,  Running,  Run 5k, 150, True
+Eternal Goal,  Scriptures,  Read for 10 minutes, 10
+Checklist Goal,  Rowing,  1 hour workout, 50, 250, 4, 1

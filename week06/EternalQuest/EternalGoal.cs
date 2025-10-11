@@ -20,8 +20,7 @@ public class EternalGoal : Goal
     public override string GetStringRepresentation()
     //Provide all of the details of a goal in a way that is easy to save to a file, and then load later.
     {
-        return $"Eternal Goal: {_shortName}, {_description}, {_points}";
+        return $"Eternal Goal, {_shortName}, {_description}, {_points}";
     }
-
 
 }
